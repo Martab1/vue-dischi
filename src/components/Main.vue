@@ -1,9 +1,13 @@
 <template>
    <main class="flex">
         <!-- disc container -->
-        <div  class="main-container flex" >      
-            <Disc v-for= "(item,index) in discs.response" :key="index" :info="item"/>
+        <div v-if= "!loading" class="main-container flex" >      
+            <Disc v-for="(item,index) in discs.response" :key="index" :info="item"/>
         </div>
+        <!-- loading -->
+        <div class="load" v-else>
+          <Loader/>
+        </div>  
        
    </main>
 </template>
@@ -13,11 +17,13 @@
 import axios from "axios";
 // importo componente singolo disco
 import Disc from "@/components/Disc.vue";
+import Loader from "@/components/Loader.vue";
 
 export default {
      name: "Main",
      components:{
         Disc,
+        Loader,
      },
      data(){
          return{
@@ -38,7 +44,7 @@ export default {
                  console.log(res.data);
                  this.discs = res.data;
                 //  console.log(this.discs.response);
-                //  this.loading = false;
+                 this.loading = false;
                  
              })
              .catch(error => {

@@ -17,7 +17,9 @@ export default {
      Header,
      Main,
      Disc,
-  }
+  },
+ 
+  
 }
 </script>
 
