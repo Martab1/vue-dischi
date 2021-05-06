@@ -32,6 +32,7 @@ export default {
 .card{
     width: 170px;
     height: 350px;
+    padding-top: 10px;
     background: $primary;
     margin: 0 15px;
     align-items: center;
@@ -47,7 +48,7 @@ img{
 
 .details {
     text-align: center;
-    padding: 0 10px;
+    padding: 10px 10px;
     padding-bottom: 50px;
        div {
             padding: 5px 0;
@@ -57,7 +58,7 @@ img{
 }
 
 h3{
-    font-weight: 200;
+    font-weight: 400;
     font-size: $h3size;
     text-transform: uppercase;
     margin: 10px 0;
