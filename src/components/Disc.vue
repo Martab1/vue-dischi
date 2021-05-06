@@ -1,9 +1,10 @@
 <template>
    <div class="card flex">
+           <!-- img-->
             <div class="flex">
                 <img :src= "info.poster" :alt="info.title">
             </div>
-
+           <!-- text  -->
             <div class="details ">
                 <h3> <a href="#">{{info.title}}</a></h3>
                 <div>{{info.author}}</div>
@@ -31,7 +32,7 @@ export default {
 
 .card{
     width: 170px;
-    height: 350px;
+    height: 340px;
     padding-top: 10px;
     background: $primary;
     margin: 0 15px;
@@ -49,7 +50,7 @@ img{
 .details {
     text-align: center;
     padding: 10px 10px;
-    padding-bottom: 50px;
+    // padding-bottom: 50px;
        div {
             padding: 5px 0;
             color:$text;

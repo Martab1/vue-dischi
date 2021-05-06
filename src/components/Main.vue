@@ -1,6 +1,6 @@
 <template>
    <main class="flex">
-       
+        <!-- disc container -->
         <div  class="main-container flex" >      
             <Disc v-for= "(item,index) in discs.response" :key="index" :info="item"/>
         </div>
