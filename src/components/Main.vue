@@ -1,11 +1,10 @@
 <template>
-   <main>
-       <div  class="main-container flex"
-             v-for= "(item,index) in discs" :key= "index" :info= "item"
-       >
-             
-        <Disc/>
-       </div>
+   <main class="flex">
+       
+        <div  class="main-container flex" >      
+            <Disc v-for= "(item,index) in discs.response" :key="index" :info="item"/>
+        </div>
+       
    </main>
 </template>
 
@@ -37,9 +36,9 @@ export default {
              axios.get(this.apiURL)
              .then(res => {
                  console.log(res.data);
-                 this.discs = res.data.response;
-                 console.log(this.discs.response);
-                 this.loading = false;
+                 this.discs = res.data;
+                //  console.log(this.discs.response);
+                //  this.loading = false;
                  
              })
              .catch(error => {
@@ -58,9 +57,11 @@ export default {
 @import "../styles/vars.scss";
 
 main{
-    height: 100vh;
     background: $background;
+    height: 95vh;
 }
+
+
 
 
 

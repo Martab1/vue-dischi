@@ -1,5 +1,5 @@
 <template>
-   <header>
+   <header >
        <!-- logo -->
          <img src="../assets/logo.png" alt="logo">
        
@@ -19,6 +19,7 @@ export default {
 header{
     padding: 5px;
     background: $primary;
+    
 }
 
 img{
